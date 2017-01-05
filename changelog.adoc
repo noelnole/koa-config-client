@@ -1,0 +1,4 @@
+= Changelog
+
+== 1.0.0
+* Koa middleware that load configuration from a configuration server.

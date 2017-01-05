@@ -1,0 +1,45 @@
+= Configuration Client
+
+Koa middleware tha revocery the properties of a configuration service.
+
+== Usage
+
+Nowadays ir really common have the configuration of your application externalized, so with this middleware you can recover in json format your properties from a configuration service as the configuration service of Spring framework.
+
+=== Configuration
+
+Before use the koa-config-client is necessary configurate de file
+configuration.json, this file will be in the root of your application:
+
+. Url of the configuration service.
+. Label of the application.
+. Name, application name.
+. Profile of your application.
+. Attempts, number of attempst in case the connection with the service fail.
+. Delay, time between attempts.
+. Logging, level of the logging.
+
+
+=== When do the library return an 405, Method not allowed ?
+
+. If service is down.
+. If the url is bad formatted.
+
+=== Retrieving the property
+
+If you want recover a property you have to pass it as parameter.
+
+
+== Example
+```js
+* var koa = require('koa');
+* var configClient = require(koa-config-client);
+* var app = new koa();
+* app.use(configClient());
+* configClient.property("security.audience");
+
+```
+
+== Additional Information
+If you want to use this library, you need at least node v.6.9.2 and
+Harmony or Babel.

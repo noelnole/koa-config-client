@@ -1,0 +1,12 @@
+{
+  "configurationservice":{
+    "url":,
+    "label":"master",
+    "name":"alarms",
+    "profile":"default",
+    "defaultkey":"defaultkey",
+    "attempts":3,
+    "delay":5000
+  },
+  "logging.level":"error"
+}
